@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/multi.scroll.appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/multi.scroll.toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+        <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+            <FrameLayout
+                    android:id="@+id/fl_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/colorAccent"
+                    android:visibility="visible"
+                    >
+
+                <Button
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:id="@+id/btn_scroll_play"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Play"
+                        />
+            </FrameLayout>
+
+            <TextView
+                    android:id="@+id/scroll_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:orientation="vertical"
+                    style="@android:style/TextAppearance.DeviceDefault.Large"
+                    android:text="@string/text_blash"
+                    >
+
+            </TextView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+            android:id="@+id/fl_hover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimary"
+            android:visibility="invisible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+        <Button
+                android:layout_gravity="bottom|left"
+                android:id="@+id/btn_hover_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Play"
+                />
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
