@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_child"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorAccent"
+            >
+    </android.support.v4.view.ViewPager>
+
+    <!--<com.rd.PageIndicatorView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--attrs:piv_viewPager="@id/viewpager_child"-->
+    <!--attrs:piv_animationType="thinWorm"-->
+    <!--attrs:piv_interactiveAnimation="true"-->
+    <!--android:layout_alignBottom="@id/viewpager_child"-->
+    <!--android:layout_marginBottom="@dimen/activity_vertical_margin"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--/>-->
+    <me.chen_wei.uidemo.viewpager.indicator.PagerIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:pi_viewpager="@id/viewpager_child"
+            app:pi_selected_color="@color/selected_color"
+            app:pi_unselected_color="@color/unselected_color"
+            android:layout_alignBottom="@id/viewpager_child"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_centerHorizontal="true"
+            />
+
+    <TextView
+            android:layout_below="@id/viewpager_child"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Content"
+            android:gravity="center"
+            />
+</RelativeLayout>

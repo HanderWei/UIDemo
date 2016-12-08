@@ -9,6 +9,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import me.chen_wei.uidemo.coordinator.CoordinatorLayoutActivity;
 import me.chen_wei.uidemo.scroll.MultiScrollActivity;
+import me.chen_wei.uidemo.viewpager.ViewPagerNestedActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,5 +28,10 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.item_coordinator_layout)
     public void onClickCoordinatorLayout(View view) {
         startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+    }
+
+    @OnClick(R.id.item_view_pager_nested)
+    public void onClickViewPagerNested(View view) {
+        startActivity(new Intent(MainActivity.this, ViewPagerNestedActivity.class));
     }
 }

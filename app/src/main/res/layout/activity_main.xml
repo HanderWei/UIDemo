@@ -24,4 +24,15 @@
             android:text="@string/ui_slide_label"
             style="@style/ListItemText"
             />
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_dark"/>
+
+    <TextView
+            android:id="@+id/item_view_pager_nested"
+            android:text="@string/ui_view_pager_nested"
+            style="@style/ListItemText"
+            />
 </LinearLayout>
